@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenGaming - Recomendador de Videojuegos</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Russo+One&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <header class="py-6 text-center">
+        <h1 class="font-title text-4xl md:text-5xl neon-text">OpenGaming</h1>
+        <p class="mt-2 text-lg text-cyan-300">Descubre tu próximo juego favorito</p>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <section id="form-section" class="bg-gray-800/30 backdrop-blur-sm p-6 md:p-8 rounded-lg border border-purple-700/50 shadow-2xl shadow-purple-900/20">
+            <h2 class="font-title text-2xl text-purple-300 mb-6">Tus Preferencias</h2>
+            <form id="game-form" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div>
+                    <label for="genre" class="block mb-2 font-semibold text-cyan-200">Género</label>
+                    <select id="genre" name="genre" class="form-input w-full p-2 rounded-md">
+                        <option value="">Cualquiera</option>
+                        <option value="Action-adventure">Acción-Aventura</option>
+                        <option value="Action role-playing">Rol de Acción (ARPG)</option>
+                        <option value="Adventure">Aventura</option>
+                        <option value="Fighting">Lucha</option>
+                        <option value="First-person shooter">Shooter en Primera Persona (FPS)</option>
+                        <option value="Platform">Plataformas</option>
+                        <option value="Puzzle">Puzzle</option>
+                        <option value="Racing">Carreras</option>
+                        <option value="Role-playing">Rol (RPG)</option>
+                        <option value="Simulation">Simulación</option>
+                        <option value="Sports">Deportes</option>
+                        <option value="Stealth">Sigilo</option>
+                        <option value="Strategy">Estrategia</option>
+                        <option value="Survival horror">Survival Horror</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="platform" class="block mb-2 font-semibold text-cyan-200">Plataforma</label>
+                    <select id="platform" name="platform" class="form-input w-full p-2 rounded-md">
+                        <option value="">Cualquiera</option>
+                        <option value="Microsoft_Windows">PC (Windows)</option>
+                        <option value="PlayStation_5">PlayStation 5</option>
+                        <option value="PlayStation_4">PlayStation 4</option>
+                        <option value="Xbox_Series_X_and_Series_S">Xbox Series X/S</option>
+                        <option value="Xbox_One">Xbox One</option>
+                        <option value="Nintendo_Switch">Nintendo Switch</option>
+                        <option value="Linux">Linux</option>
+                        <option value="macOS">macOS</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block mb-2 font-semibold text-cyan-200">Rango de Años</label>
+                    <div class="flex items-center space-x-2">
+                        <input type="number" id="releaseYearFrom" name="releaseYearFrom" min="1970" max="2025" placeholder="Desde" class="form-input w-full p-2 rounded-md">
+                        <span>-</span>
+                        <input type="number" id="releaseYearTo" name="releaseYearTo" min="1970" max="2025" placeholder="Hasta" class="form-input w-full p-2 rounded-md">
+                    </div>
+                </div>
+                <div>
+                    <label for="developer" class="block mb-2 font-semibold text-cyan-200">Desarrollador (tipea o elige)</label>
+                    <input list="developer-list" id="developer" name="developer" placeholder="Ej: FromSoftware" class="form-input w-full p-2 rounded-md">
+                    <datalist id="developer-list">
+                        <option value="Nintendo">
+                        <option value="FromSoftware">
+                        <option value="Rockstar Games">
+                        <option value="Naughty Dog">
+                        <option value="CD Projekt Red">
+                        <option value="Capcom">
+                        <option value="Square Enix">
+                        <option value="Kojima Productions">
+                        <option value="Insomniac Games">
+                        <option value="Ubisoft">
+                        <option value="Valve Corporation">
+                    </datalist>
+                </div>
+                <div>
+                    <label for="publisher" class="block mb-2 font-semibold text-cyan-200">Publicadora (tipea o elige)</label>
+                    <input list="publisher-list" id="publisher" name="publisher" placeholder="Ej: Sony" class="form-input w-full p-2 rounded-md">
+                    <datalist id="publisher-list">
+                        <option value="Nintendo">
+                        <option value="Sony Interactive Entertainment">
+                        <option value="Microsoft">
+                        <option value="Electronic Arts">
+                        <option value="Activision">
+                        <option value="Take-Two Interactive">
+                        <option value="Rockstar Games">
+                        <option value="Ubisoft">
+                        <option value="Square Enix">
+                        <option value="Bandai Namco Entertainment">
+                        <option value="Sega">
+                        <option value="Capcom">
+                    </datalist>
+                </div>
+                <div>
+                    <label for="gameMode" class="block mb-2 font-semibold text-cyan-200">Modo de Juego</label>
+                    <select id="gameMode" name="gameMode" class="form-input w-full p-2 rounded-md">
+                        <option value="">Cualquiera</option>
+                        <option value="Single-player">Un Jugador</option>
+                        <option value="Multiplayer">Multijugador</option>
+                    </select>
+                </div>
+                <div class="md:col-span-2 lg:col-span-3 text-center mt-4">
+                    <button type="submit" class="btn-primary font-bold py-3 px-8 rounded-lg shadow-lg">
+                        Buscar Juegos
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section id="query-display-section" class="mt-8 hidden">
+            <h3 class="font-title text-xl text-purple-300 mb-4">Consulta SPARQL Generada</h3>
+            <pre class="bg-gray-900/70 p-4 rounded-md border border-cyan-700/50 text-cyan-200 overflow-x-auto text-sm"><code id="sparql-query-output"></code></pre>
+        </section>
+
+        <section id="results-section" class="mt-12">
+            <h2 class="font-title text-3xl text-center mb-8 text-cyan-300">Resultados</h2>
+            <div id="loader" class="hidden text-center">
+                <svg class="animate-spin h-10 w-10 text-cyan-400 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <p class="mt-4">Consultando el universo de datos...</p>
+            </div>
+            <div id="no-results" class="hidden text-center text-xl text-red-400">
+                <p>No se encontraron juegos con esos criterios. ¡Intenta con otros filtros!</p>
+            </div>
+            <div id="results-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-4 mt-8 border-t border-purple-800/50">
+        <p>Creado por: <span class="font-semibold text-cyan-300">Jean Alejo</span></p>
+    </footer>
+
+    <script src="js/app.js" defer></script>
+</body>
+</html>

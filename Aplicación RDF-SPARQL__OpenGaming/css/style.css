@@ -1,0 +1,66 @@
+/* Custom styles for the gamer theme */
+body {
+    font-family: 'Russo One', sans-serif;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(22, 4, 79, 0.4) 0%, transparent 40%),
+        radial-gradient(circle at 75% 75%, rgba(13, 63, 102, 0.4) 0%, transparent 40%);
+}
+.font-title {
+    font-family: 'Press Start 2P', cursive;
+}
+.neon-text {
+    text-shadow:
+        0 0 5px rgba(0, 255, 255, 0.8),
+        0 0 10px rgba(0, 255, 255, 0.8),
+        0 0 20px rgba(0, 255, 255, 0.8),
+        0 0 40px rgba(0, 191, 255, 0.8),
+        0 0 80px rgba(0, 191, 255, 0.8);
+}
+.card {
+    background-color: rgba(23, 26, 43, 0.85);
+    border: 1px solid #4a4a8a;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(74, 74, 138, 0.7);
+}
+.form-input {
+    background-color: #16192a;
+    border: 1px solid #4a4a8a;
+    color: #e0e0e0;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-input:focus {
+    outline: none;
+    border-color: #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+.btn-primary {
+    background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(37, 117, 252, 0.7);
+}
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #1a1a2e;
+}
+::-webkit-scrollbar-thumb {
+    background: #4a4a8a;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #6a11cb;
+}
