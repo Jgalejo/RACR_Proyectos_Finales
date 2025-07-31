@@ -1,0 +1,71 @@
+base_uri: http://example.org/data/
+namespaces:
+  ex: http://example.org/data/
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  dc: http://purl.org/dc/elements/1.1/
+  dcterms: http://purl.org/dc/terms/
+  bibo: http://purl.org/ontology/bibo/
+  xsd: http://www.w3.org/2001/XMLSchema#
+subject:
+  class: schema:Thing
+  primary_key: id
+  uri_template: resource/id/{value}
+properties:
+  id:
+    predicate: schema:identifier
+    type: literal
+  Name:
+    predicate: schema:name
+    type: literal
+  Gender:
+    predicate: ex:gender
+    type: literal
+  Age:
+    predicate: ex:age
+    type: literal
+  City:
+    predicate: ex:city
+    type: literal
+  Working Professional or Student:
+    predicate: ex:working_professional_or_student
+    type: literal
+  Profession:
+    predicate: ex:profession
+    type: literal
+  Academic Pressure:
+    predicate: ex:academic_pressure
+    type: literal
+  Work Pressure:
+    predicate: ex:work_pressure
+    type: literal
+  CGPA:
+    predicate: ex:cgpa
+    type: literal
+  Study Satisfaction:
+    predicate: ex:study_satisfaction
+    type: literal
+  Job Satisfaction:
+    predicate: ex:job_satisfaction
+    type: literal
+  Sleep Duration:
+    predicate: ex:sleep_duration
+    type: literal
+  Dietary Habits:
+    predicate: ex:dietary_habits
+    type: literal
+  Degree:
+    predicate: ex:degree
+    type: literal
+  Have you ever had suicidal thoughts ?:
+    predicate: ex:have_you_ever_had_suicidal_thoughts_
+    type: literal
+  Work/Study Hours:
+    predicate: ex:workstudy_hours
+    type: literal
+  Financial Stress:
+    predicate: ex:financial_stress
+    type: literal
+  Family History of Mental Illness:
+    predicate: ex:family_history_of_mental_illness
+    type: literal

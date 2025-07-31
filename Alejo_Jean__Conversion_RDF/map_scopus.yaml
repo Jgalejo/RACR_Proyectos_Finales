@@ -1,0 +1,111 @@
+base_uri: http://example.org/data/
+namespaces:
+  ex: http://example.org/data/
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  dc: http://purl.org/dc/elements/1.1/
+  dcterms: http://purl.org/dc/terms/
+  bibo: http://purl.org/ontology/bibo/
+  xsd: http://www.w3.org/2001/XMLSchema#
+subject:
+  class: bibo:AcademicArticle
+  primary_key: DOI
+  uri_template: resource/doi/{value}
+properties:
+  Authors:
+    predicate: dc:creator
+    type: relation
+    separator: ;
+    target:
+      uri_template: person/{value}
+      class: foaf:Person
+      properties:
+      - predicate: foaf:name
+        type: literal
+        source: self
+      - predicate: dc:identifier
+        type: literal
+        source: Author(s) ID
+  Author full names:
+    predicate: dc:creator
+    type: relation
+    separator: ;
+    target:
+      uri_template: person/{value}
+      class: foaf:Person
+      properties:
+      - predicate: foaf:name
+        type: literal
+        source: self
+      - predicate: dc:identifier
+        type: literal
+        source: Author(s) ID
+  Title:
+    predicate: dc:title
+    type: literal
+  Year:
+    predicate: dcterms:issued
+    type: literal
+    datatype: xsd:gYear
+  Source title:
+    predicate: dc:title
+    type: literal
+  Volume:
+    predicate: ex:volume
+    type: literal
+  Issue:
+    predicate: ex:issue
+    type: literal
+  Art. No.:
+    predicate: ex:art._no.
+    type: literal
+  Page start:
+    predicate: ex:page_start
+    type: literal
+  Page end:
+    predicate: ex:page_end
+    type: literal
+  Page count:
+    predicate: ex:page_count
+    type: literal
+  Cited by:
+    predicate: ex:cited_by
+    type: literal
+  DOI:
+    predicate: bibo:doi
+    type: literal
+  Link:
+    predicate: foaf:page
+    type: uri
+  Abstract:
+    predicate: dcterms:abstract
+    type: literal
+  Author Keywords:
+    predicate: dcterms:subject
+    type: literal
+    separator: ;
+  Index Keywords:
+    predicate: dcterms:subject
+    type: literal
+    separator: ;
+  Funding Details:
+    predicate: ex:funding_details
+    type: literal
+  Funding Texts:
+    predicate: ex:funding_texts
+    type: literal
+  Document Type:
+    predicate: ex:document_type
+    type: literal
+  Publication Stage:
+    predicate: ex:publication_stage
+    type: literal
+  Open Access:
+    predicate: ex:open_access
+    type: literal
+  Source:
+    predicate: ex:source
+    type: literal
+  EID:
+    predicate: ex:eid
+    type: literal
