@@ -185,6 +185,8 @@ Si encuentras algún bug o tienes sugerencias:
 
 Desarrollado como parte del proyecto de la asignatura **"Representación Avanzada del Conocimiento y Razonamiento"**.
 
+#### Jean Alejo
+
 ---
 
 <div align="center">
