@@ -1,7 +1,7 @@
 # OpenGaming - Recomendador de Videojuegos
 
 Una aplicación web que permite encontrar videojuegos basándose en preferencias del usuario, utilizando consultas SPARQL a DBpedia.
-![Interfaz Principal](imag/portada.png)
+![Interfaz Principal](img/portada.png)
 
 
 ## Archivos
