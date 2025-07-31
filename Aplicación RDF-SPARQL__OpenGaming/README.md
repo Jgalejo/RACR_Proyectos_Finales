@@ -1,7 +1,7 @@
 # OpenGaming - Recomendador de Videojuegos
 
 Una aplicación web que permite encontrar videojuegos basándose en preferencias del usuario, utilizando consultas SPARQL a DBpedia.
-![Interfaz Principal](images/portada.png)
+![Interfaz Principal](imag/portada.png)
 
 
 ## Archivos
@@ -47,9 +47,9 @@ Una aplicación web que permite encontrar videojuegos basándose en preferencias
 ## Opción 1: Clonar el repositorio
 
 ```bash
-git clone hhttps://github.com/Jgalejo/RACR_Proyectos_Finales.git
+git clone https://github.com/Jgalejo/RACR_Proyectos_Finales.git
 cd  Aplicación RDF-SPARQL__OpenGaming
-pip install -r requirements.txt
+start index.html
 ```
 1. Clona o descarga los archivos
 2. Asegúrate de que todos los archivos estén en el mismo directorio
