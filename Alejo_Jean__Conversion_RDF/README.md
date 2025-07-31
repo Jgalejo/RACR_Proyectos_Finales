@@ -9,11 +9,6 @@
 
 Una herramienta intuitiva para convertir datos tabulares (CSV) en grafos de conocimiento RDF con mapeo inteligente y detección automática de contexto.
 
-[Características](#características) •
-[Instalación](#instalación) •
-[Uso Rápido](#uso-rápido) •
-[Ejemplos](#ejemplos) •
-[Documentación](#documentación)
 
 </div>
 
