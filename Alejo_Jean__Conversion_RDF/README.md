@@ -160,25 +160,12 @@ El sistema correlaciona automáticamente los valores usando separadores (`;` por
 - **N-Triples (.nt)**: Formato simple línea por línea
 
 
-
-## 🐛 Reportar Problemas
-
-Si encuentras algún bug o tienes sugerencias:
-
-1. Revisa que no exista ya un issue similar
-2. Crea un nuevo issue con:
-   - Descripción clara del problema
-   - Pasos para reproducirlo
-   - Archivos de ejemplo (CSV/YAML) si es relevante
-   - Logs de error completos
-
 ## 📈 Casos de Uso
 
 - **🎓 Académico**: Conversión de bibliografías y publicaciones científicas
 - **🏢 Empresarial**: Transformación de catálogos de productos y datos corporativos
 - **🏛️ Institucional**: Migración de datos de bibliotecas y archivos
 - **🔬 Investigación**: Creación de knowledge bases para proyectos de IA
-
 
 
 ## 👨‍💻 Autor
@@ -192,9 +179,5 @@ Desarrollado como parte del proyecto de la asignatura **"Representación Avanzad
 <div align="center">
 
 **¿Te ha resultado útil? ⭐ Dale una estrella al repositorio**
-
-[Reportar Bug](../../issues) •
-[Solicitar Feature](../../issues) •
-[Documentación](docs/documentation.md)
 
 </div>
