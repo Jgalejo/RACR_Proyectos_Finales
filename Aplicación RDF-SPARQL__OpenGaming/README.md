@@ -3,7 +3,6 @@
 Una aplicación web que permite encontrar videojuegos basándose en preferencias del usuario, utilizando consultas SPARQL a DBpedia.
 
 
-
 ## Archivos
 
 ### index.html
@@ -47,7 +46,22 @@ Una aplicación web que permite encontrar videojuegos basándose en preferencias
 3. Abre `index.html` en un navegador web
 4. ¡La aplicación estará lista para usar!
 
-## Uso
+### Ejemplo
+## Opción 1: Clonar el repositorio
+
+```bash
+git clone hhttps://github.com/Jgalejo/RACR_Proyectos_Finales.git
+cd  Aplicación RDF-SPARQL__OpenGaming
+pip install -r requirements.txt
+```
+
+## 🚀Uso
+
+### Ejecutar la aplicación
+
+```bash
+python Script_conversion.py
+```
 
 1. Selecciona tus preferencias en el formulario
 2. Haz clic en "Buscar Juegos"
@@ -62,5 +76,6 @@ Una aplicación web que permite encontrar videojuegos basándose en preferencias
 - Manejo de imágenes con fallback a placeholders cuando no están disponibles
 
 ## Autor
+Desarrollado como parte del proyecto de la asignatura **"Representación Avanzada del Conocimiento y Razonamiento"**.
 
 Jean Alejo
